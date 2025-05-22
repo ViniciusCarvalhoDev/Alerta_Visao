@@ -43,8 +43,6 @@ A página foi criada com foco em:
 
 ### 💻 Desktop  ![screencapture-pdfpoc01-blob-core-windows-net-web-landing-page-html-2025-05-22-18_14_04](https://github.com/user-attachments/assets/7f1139c2-b4fd-42cf-8249-52ea160597ef)
 
-![Desktop Preview]()
-
 ### 📱 Mobile  
 
 
@@ -52,6 +50,7 @@ A página foi criada com foco em:
 
 ## 🚀 Como visualizar o projeto
 
+Clique no link: https://pdfpoc01.blob.core.windows.net/$web/landing_page.html
 Você pode clonar este repositório e abrir o arquivo `index.html` diretamente no navegador:
 
 ```bash
