@@ -18,7 +18,6 @@
       background: #111827;
       color: #fff;
       padding: 3rem 2rem;
-      text-align: center;
     }
 
     header h1 {
@@ -30,6 +29,7 @@
       font-size: 1.2rem;
       max-width: 700px;
       margin: 0 auto;
+      text-align: justify;
     }
 
     .container {
@@ -126,20 +126,38 @@
 
     ul {
         list-style: none;
+        text-align: justify;
     }
 
     h2{
         text-align: center;
+        text-align: justify;
     }
 
     h3{
         text-align: center;
+        text-align: justify;
+    }
+
+    #typewriter-text::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: #333;
+    }
+
+    @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+    }
+
+    ul li {
+    line-height: 2;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Sistema Alerta Visão</h1>
+    <h1 style="text-align: center !important;" id="typewriter-text"></h1>
     <p>Proteja sua casa com inteligência artificial. Detecte quedas, incêndios, invasões e muito mais com nossa solução de visão computacional em tempo real.</p>
   </header>
 
@@ -251,6 +269,22 @@
       alert(`Obrigado, ${name}! Seu cadastro foi recebido. Enviaremos novidades para ${email}.`);
       event.target.reset();
     });
+
+    
+    const text = "Sistema Alerta Visão";
+    const target = document.getElementById("typewriter-text");
+
+    let i = 0;
+    function typeWriter() {
+        if (i < text.length) {
+        target.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 60); 
+        }
+    }
+
+    window.addEventListener('load', typeWriter);
+
   </script>
 </body>
 </html>
